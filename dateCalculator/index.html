@@ -5,24 +5,41 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Date Calculator</title>
-	<script type="module" src="js/main.js"></script>
+	<title>Калькулятор дат</title>
+	<script type="module" src="./js/main.js"></script>
 </head>
 
 <body>
 	<h2>Калькулятор дат</h2>
-	<form id="calcDate">
-		<label for="dateFrom">
-			Первая дата:
-			<input type="date" name="dateFrom" id="dateFrom">
-		</label>
-		<label for="dateTo">
-			Вторая дата:
-			<input type="date" name="dateTo" id="dateTo">
-		</label>
-		<button type="submit">Рассчитать промежуток</button>
+	<div>
+		<form id="calcDate">
+			<label for="dateFrom">
+				Первая дата:
+				<input type="date" name="dateFrom" id="dateFrom">
+			</label>
+			<label for="dateTo">
+				Вторая дата:
+				<input type="date" name="dateTo" id="dateTo">
+			</label>
+			<button type="submit">Рассчитать промежуток</button>
+		</form>
+		<p id="output">
+		</p>
+	</div>
+	<h2>Таймер</h2>
+	<form id="timer">
+		<h3>Задайте время</h3>
+		<button id="5min">+5мин</button>
+		<button id="1min">+1мин</button>
+		<button id="5sec">+5сек</button>
+		<button id="1sec">+1сек</button>
+		<span id="minutes">00</span>
+		:
+		<span id="seconds">00</span>
+		<button id="start">Start</button>
+		<button id="pause">Pause</button>
+		<button id="stop">Stop</button>
 	</form>
-	<p id="output"></p>
 </body>
 
 </html>

@@ -4,20 +4,20 @@ import getDateDiff from '../utils/getDateDiff.js';
 const form = document.getElementById("calcDate");
 
 form.onsubmit = (event) => {
-	event.preventDefault();
+    event.preventDefault();
 
-	const formData = new FormData(form);
+    const formData = new FormData(form);
 
-	const dateFrom = formData.get("dateFrom");
-	const dateTo = formData.get("dateTo");
+    const dateFrom = formData.get("dateFrom");
+    const dateTo = formData.get("dateTo");
 
-	if (!dateFrom || !dateTo) {
-		printError('Ошибка, заполните оба поля!')
+    if (!dateFrom || !dateTo) {
+        printError('Ошибка, заполните оба поля!')
 
-		return
-	}
+        return
+    }
 
-	const dateDiff = getDateDiff(dateFrom, dateTo);
+    const dateDiff = getDateDiff(dateFrom, dateTo)
 
-	printDateDiff(dateDiff);
+    printDateDiff(dateDiff)
 };
